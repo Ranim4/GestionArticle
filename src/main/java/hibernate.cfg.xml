@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">  
+  
+<hibernate-configuration>  
+    <session-factory>  
+        <property name="hbm2ddl.auto">update</property>  
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>  
+        <property name="connection.url">jdbc:mysql://localhost/tp1Articles?serverTimezone=UTC</property>  
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>  
+    
+    	<mapping class="bo.Article"/>
+    	<mapping class="bo.Ecran"/>
+    	<mapping class="bo.Meuble"/>
+    	<mapping class="bo.Entrepot"/>
+    	<mapping class="bo.Gamme"/>
+    	<mapping class="bo.Stock"/>
+    </session-factory>  
+</hibernate-configuration>  
